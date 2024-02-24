@@ -1,0 +1,27 @@
+/* Define styles for the comment input form */
+.comment-container {
+  max-height: 200px;
+  overflow: auto;
+  background-color: black; /* Set background color to black */
+}
+.comment-container .comment {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.comment-container .comment:first-child {
+  margin-top: 0;
+}
+.comment-container .comment:last-child {
+  margin-bottom: 0;
+}
+/* Define styles for the like button animation */
+@keyframes heartBeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
+
+.heart-animation {
+  animation: heartBeat 0.5s;
+}

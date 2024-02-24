@@ -1,0 +1,12 @@
+.form-container {
+    display: flex;
+  }
+  
+  .image-container {
+    flex: 1;
+  }
+  
+  .login-details {
+    flex: 1;
+  }
+  

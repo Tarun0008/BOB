@@ -52,13 +52,18 @@ app.use("/auth", authRoutes);
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 
+/* Root URL Route Handler */
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
+
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;
-mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+mongoose.connect("mongodb+srv://tarunrajasekar1:bob@cluster0.o2qo6fs.mongodb.net/", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
 

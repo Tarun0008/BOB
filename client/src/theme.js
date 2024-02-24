@@ -16,16 +16,16 @@ export const colorTokens = {
     1000: "#000000",
   },
   primary: {
-    50: "#E6FBFF",
-    100: "#CCF7FE",
-    200: "#99EEFD",
-    300: "#66E6FC",
-    400: "#33DDFB",
-    500: "#00D5FA",
-    600: "#00A0BC",
-    700: "#006B7D",
-    800: "#00353F",
-    900: "#001519",
+    50: "#FFF9C4",
+    100: "#FFF59D",
+    200: "#FFF176",
+    300: "#FFEE58",
+    400: "#FFEB3B",
+    500: "#FDD835",
+    600: "#FBC02D",
+    700: "#F9A825",
+    800: "#F57F17",
+    900: "#F57F17",
   },
 };
 
@@ -34,30 +34,11 @@ export const themeSettings = (mode) => {
   return {
     palette: {
       mode: mode,
-      ...(mode === "dark"
+      ...(mode === "light"
         ? {
-            // palette values for dark mode
-            primary: {
-              dark: colorTokens.primary[200],
-              main: colorTokens.primary[500],
-              light: colorTokens.primary[800],
-            },
-            neutral: {
-              dark: colorTokens.grey[100],
-              main: colorTokens.grey[200],
-              mediumMain: colorTokens.grey[300],
-              medium: colorTokens.grey[400],
-              light: colorTokens.grey[700],
-            },
-            background: {
-              default: colorTokens.grey[900],
-              alt: colorTokens.grey[800],
-            },
-          }
-        : {
             // palette values for light mode
             primary: {
-              dark: colorTokens.primary[700],
+              dark: colorTokens.primary[800],
               main: colorTokens.primary[500],
               light: colorTokens.primary[50],
             },
@@ -71,6 +52,25 @@ export const themeSettings = (mode) => {
             background: {
               default: colorTokens.grey[10],
               alt: colorTokens.grey[0],
+            },
+          }
+        : {
+            // palette values for dark mode
+            primary: {
+              dark: colorTokens.primary[800],
+              main: colorTokens.primary[500],
+              light: colorTokens.primary[50],
+            },
+            neutral: {
+              dark: colorTokens.grey[100],
+              main: colorTokens.grey[200],
+              mediumMain: colorTokens.grey[300],
+              medium: colorTokens.grey[400],
+              light: colorTokens.grey[700],
+            },
+            background: {
+              default: colorTokens.grey[900],
+              alt: colorTokens.grey[800],
             },
           }),
     },
